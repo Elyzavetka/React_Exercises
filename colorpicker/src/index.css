@@ -1,9 +1,9 @@
-body {
+/* body {
   height: 100%;
   background-color: #a7d1bc;
   text-align: center;
   margin: 0;
-}
+} */
 
 
 .background {
@@ -13,7 +13,7 @@ body {
   justify-content: center;
   text-align: center;
 }
-/* body {
+body {
   height: 100%;
   margin: 0;
   display: flex;
@@ -21,4 +21,4 @@ body {
   justify-content: center;
   text-align: center;
   background-color: #a7d1bc;
-} */
+}
