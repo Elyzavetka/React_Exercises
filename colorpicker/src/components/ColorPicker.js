@@ -3,21 +3,21 @@ import React, { useState } from 'react';
 export default function ColorPicker() {
     const [color, setColor] = useState();
 
-    const divStyle = {backgroundColor: 'purple'};
+    const divStyle = {backgroundColor: color};
 
     return (
-        <div style={divStyle}>
+        <div id="background" style={divStyle}>
             <p>The color is {color}</p>
-            <button>
+            <button onClick={() => setColor('Aquamarine')}>
                 Aquamarine
             </button>
-            <button>
+            <button onClick={() => setColor('BlueViolet')}>
                 BlueViolet
             </button>
-            <button>
+            <button onClick={() => setColor('Chartreuse')}>
                 Chartreuse
             </button>
-            <button>
+            <button onClick={() => setColor('CornflowerBlue')}>
                 CornflowerBlue
             </button>
         </div>
