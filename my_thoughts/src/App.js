@@ -3,6 +3,8 @@ import { AddThoughtForm } from "./AddThoughtForm";
 import { Thought } from "./Thought";
 import { generateId, getNewExpirationTime } from "./utilities";
 import { logError } from "./error-logging-service";
+import { ErrorBoundary } from 'react-error-boundary';
+
 
 const createThought = (text) => {
   return {
@@ -43,11 +45,13 @@ function App() {
         <AddThoughtForm addThought={addThought} />
         <ul className="thoughts">
           {thoughts.map((thought) => (
+            <ErrorBoundary>
             <Thought
               removeThought={removeThought}
               key={thought.id}
               thought={thought}
             />
+            </ErrorBoundary>
           ))}
         </ul>
       </main>
