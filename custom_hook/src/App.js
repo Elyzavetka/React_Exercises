@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import ReactDOM from 'react-dom/client';
+import React from 'react';
+import { LongitudeLatitudeDisplay } from './components/LongitudeLatitudeDisplay.js';
+import { HemisphereDisplay } from './components/HemisphereDisplay.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main>
+      <h1>Geo Locator</h1>
+      <LongitudeLatitudeDisplay />
+      <HemisphereDisplay />
+    </main>
+  )
 }
-
-export default App;
+export default App
