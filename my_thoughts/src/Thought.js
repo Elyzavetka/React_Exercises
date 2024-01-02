@@ -12,13 +12,15 @@ export function Thought(props) {
     };
 
     useEffect(() => {
-        const timesUp = setTimeout(() => {
-        removeThought(thought.id);
-        }, thought.expiresAt - Date.now());
-
-        return () => {
-            clearTimeout(timesUp);
-        };
+        if (thought.expiresAt > Date.now()) {
+            const timesUp = setTimeout(() => {
+                removeThought(thought.id);
+            }, thought.expiresAt - Date.now());
+    
+            return () => {
+                clearTimeout(timesUp);
+            };
+        }
     }, [thought]);
 
     return (

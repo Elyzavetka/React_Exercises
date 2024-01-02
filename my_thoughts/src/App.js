@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { createRoot } from "react-dom/client";
 import { AddThoughtForm } from "./AddThoughtForm";
 import { Thought } from "./Thought";
 import { generateId, getNewExpirationTime } from "./utilities";
 import { logError } from "./error-logging-service";
-
-const root = createRoot(document.getElementById("app"));
 
 const createThought = (text) => {
   return {
@@ -58,4 +55,4 @@ function App() {
   );
 }
 
-root.render(<App />);
+export default App;

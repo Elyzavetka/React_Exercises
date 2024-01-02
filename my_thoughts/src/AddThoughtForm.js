@@ -6,7 +6,7 @@ export function AddThoughtForm(props) {
         const { value } = target;
         setText(value);
     };
-    const handleSubmit = () => {
+    const handleSubmit = (event) => {
         event.preventDefault();
         props.addThought(text);
         setText("");
